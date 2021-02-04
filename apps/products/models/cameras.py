@@ -4,16 +4,17 @@
 from django.db import models
 
 # Models
-from apps.utilities import Product, RandomCamerasModel
+from apps.utilities import RandomCamerasModel
+from apps.utilities.product import Product
 
 class Camera(Product, RandomCamerasModel):
     """Camera model."""
 
-    maxISO = models.PositiveIntegerField(defaut=0)
+    maxISO = models.PositiveIntegerField(default=0)
     
-    type_ = models.CharField()
+    tipe = models.CharField(max_length=50)
 
-    crop_factor = models.CharField()
+    crop_factor = models.CharField(max_length=20)
 
     def __str__(self):
         return self.name

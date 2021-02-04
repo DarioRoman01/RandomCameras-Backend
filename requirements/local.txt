@@ -6,6 +6,9 @@ ipdb==0.11
 # Tools
 django-extensions==2.2.9
 
+# Email
+django-anymail[mailgun]==5.0
+
 # Testing
 mypy==0.650
 pytest==4.0.2
