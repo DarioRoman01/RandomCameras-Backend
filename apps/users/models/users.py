@@ -5,8 +5,11 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.core.validators import RegexValidator
 
+# Models
+from apps.utilities import RandomCamerasModel
 
-class User(AbstractUser):
+
+class User(RandomCamerasModel, AbstractUser):
     """User model. Extends from django abstract 
     user model and some extra fields"""
 
