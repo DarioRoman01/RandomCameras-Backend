@@ -1,0 +1,25 @@
+  
+# Base
+pytz==2020.5
+python-slugify==1.2.6
+Pillow==8.1.0
+psycopg2==2.8.6
+
+# Django
+django==3.1.5
+
+# Environment
+django-environ==0.4.5
+
+# Django REST Framework
+djangorestframework==3.12.2
+django-filter==2.4.0
+
+# JWT
+pyjwt==2.0.1
+
+# Passwords security
+argon2-cffi==18.3.0
+
+# Static files
+whitenoise==4.1.2
