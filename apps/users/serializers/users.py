@@ -50,6 +50,8 @@ class UserSignupSerializer(serializers.Serializer):
         validators = [UniqueValidator(queryset=User.objects.all())]
     )
 
+    picture = serializers.ImageField(required=False)
+
     password = serializers.CharField(min_length=8)
     password_confirmation = serializers.CharField(min_length=8)
 
