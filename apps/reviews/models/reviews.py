@@ -5,16 +5,21 @@ from django.db import models
 
 # Models
 from apps.utilities import RandomCamerasModel
-from apps.users.models import User
-from apps.products.models import Camera
+from apps.utilities.reviews import Review
+from apps.products.models import Camera, Lens
 
-class Review(RandomCamerasModel):
-    """Review model."""
+class CameraReview(RandomCamerasModel, Review):
+    """Camera review model."""
 
-    title = models.CharField()
-    content = models.TextField()
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
-    product = models.ForeignKey(Camera, on_delete=models.SET_NULL)
+    product = models.ForeignKey(Camera, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.title
+
+class LenReview(RandomCamerasModel, Review):
+    """Len review model."""
+    
+    product = models.ForeignKey(Lens, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
