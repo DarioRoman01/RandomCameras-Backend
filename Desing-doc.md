@@ -9,13 +9,12 @@ La empresa "RandomCameraReviews" necesita un sistema que permita que fotografos 
 
 Tambien se sabe que la empresa "RandomCameraReviews" planea distribuir mayormente en America del Sur donde esta su mercado mas grande, pero tambien tienen ventas en norte america, Europa, y muy pocas en Asia.
 
-### Alcance(Scope)
-Descripción..
 
-#### Casos de uso
+#### Scope (casos de uso soportados)
 Descripción...
 * Como editor me gustaria poder subir una review de una camara
 * Como editor me gustaria subir una review de un lente para las camaras
+* Como editor me gustaria poder editar una review ya hecha
 * Como editor me gustaria poder subir una review sobre accesorios para las camaras
 * Como usuario no registrado me gustaria poder leer una review
 
@@ -25,24 +24,27 @@ Descripción...
 * Como usuario no registrado me gustaria poder comentar reviews
 * Como usuario no registrado me gustaria poder compartir las reviews en mis redes sociales
 * Como editor me gustaria poder dar feedback a otras reviews
+* Como editor me gustaria poder editar la review de otro editor
 * ...
 ---
 ## Arquitectura
 
-### Diagramas
-poner diagramas de secuencia, uml, etc
 
-### Modelo de datos
-Poner diseño de entidades, Jsons, tablas, diagramas entidad relación, etc..
+### Diagramas
+![](apps/templates/diagrama.png)
 
 ---
 ### Plan de pruebas
 * Crear proyecto pruebas que valida los siguientes casos de uso.
 
-- registrar usuario, crear review, simular que visitante puede leer el review escrito
+- registrar usuario
+- crear un producto
+- editar el producto
+- hacer una review del producto
+- simular que un usario puede leer esa review
 
 ### Integracion continua
-* 
+* Todo un test que valla desde registrar un usuario hasta simular que un usuario lea la review
 
 ---
 ## Limitaciones
