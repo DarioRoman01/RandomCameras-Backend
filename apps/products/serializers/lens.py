@@ -59,7 +59,7 @@ class AddLenFeatureSerializer(serializers.Serializer):
 
         feature = Feature.objects.create(**validated_data)
 
-        lens = self.context['lens']
+        lens = self.context['len']
 
         lens.feature.add(feature)
 

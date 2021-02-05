@@ -91,7 +91,7 @@ class UserSignupSerializer(serializers.Serializer):
         subject = 'Welcome @{}! Verify your account to start using the app'.format(user.username)
         from_email = 'Contact List <noreply@contactlist.com>'
         text_content = render_to_string(
-            'emails/users/account_verifiaction.html',
+            'emails/account_verifiaction.html',
             {'token' : verification_token, 'user': user}
         )
         msg = EmailMultiAlternatives(subject, text_content, from_email, [user.email])
