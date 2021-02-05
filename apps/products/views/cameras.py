@@ -36,6 +36,10 @@ class CamerasViewSet(mixins.RetrieveModelMixin,
                     viewsets.GenericViewSet):
 
     """camera view set."""
+    lookup_field = 'pk'
+    lookup_url_kwarg = 'pk'
+
+    serializer_class = CameraModelSerializer
 
     def get_permissions(self):
         """Assing permissions based on actions."""

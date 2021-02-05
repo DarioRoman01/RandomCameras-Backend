@@ -36,6 +36,8 @@ class LensViewSet(mixins.RetrieveModelMixin,
 
     """Lens view set."""
 
+    serializer_class = LensModelSerializer
+
     def get_permissions(self):
         """Assing permissions based on actions."""
         if self.action in ['update', 'partial_update', 'store', 'addfeature']:
